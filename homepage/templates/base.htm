@@ -1,0 +1,70 @@
+## this is the skeleton of all pages on in this app - it defines the basic html tags
+
+## set up a StaticRenderer object to enable the CSS/JS automatic inclusion magic.
+<%! from django_mako_plus.controller import static_files %>
+<%  static_renderer = static_files.StaticRenderer(self) %>
+
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <head>
+    
+    <title>Lexicity</title>
+    
+    ## add any site-wide scripts or CSS here; for example, jquery:
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">    </script>
+  
+    ## render the css with the same name as this page
+    ${ static_renderer.get_template_css(request, context)  }
+  
+  </head>
+  <body>
+  
+  <header class="top" role="header">
+    <div class="container">
+      <a href="#" class="navbar-brand pull-left">Lexicity</a>
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <nav class="navbar-collapse collapse" role="navigation">
+          <ul class="navbar-nav nav">
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+  </header>
+  
+    <%block name="content">
+      Site content goes here in sub-templates.
+    </%block>  
+  
+  <div class="bottom">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <a href="https://www.facebook.com/lexicityonline" target="_blank">
+            <img src="static/homepage/media/New_facebook.png"/>
+          </a>
+          <a href="https://plus.google.com/+Lexicity" target="_blank">
+            <img src="static/homepage/media/New_googleplus.png"/>
+          </a>
+          <a href="https://www.twitter.com/lexicityonline" target="_blank">
+            <img src="static/homepage/media/New_twitter.png"/>
+          </a>
+          <h3>Send us resources <a href="contact">here</a>.</h3>
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    ## render the JS with the same name as this page
+    ${ static_renderer.get_template_js(request, context)  }
+  
+  </body>
+</html>

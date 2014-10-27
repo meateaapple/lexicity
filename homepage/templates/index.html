@@ -1,0 +1,43 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+  <div class="content">
+    <div class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="${ STATIC_URL }homepage/media/lexicity_logo.png" alt="Lexicity logo"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 subtitles">
+            <h2>The first and only comprehensive index for ancient language resources on the internet.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="middle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 content">
+          <h2>Choose Your Language</h2>
+        </div>
+      </div>
+      <div class="row">
+        
+      %for language in languages:
+      
+        <a href="${ language }">
+          <div class="col-md-3 tile">
+            <img src="${ STATIC_URL }homepage/media/${ language }.png"/>
+            <h3>${ language }</h3>
+          </div>
+        </a>
+        
+      %endfor
+      
+      </div>
+    </div>
+  </div>
+</%block>
