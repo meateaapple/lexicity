@@ -6007,3 +6007,15 @@ form textarea {
   font-weight: bold;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  .large-ad {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-ad {
+    display: none;
+  }
+}

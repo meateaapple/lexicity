@@ -4,7 +4,7 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1414295667.208334
+_modified_time = 1414886464.58048
 _enable_loop = True
 _template_filename = '/Users/bradgessell/Documents/lexicity/homepage/templates/contact.html'
 _template_uri = 'contact.html'
@@ -55,6 +55,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "contact.html", "source_encoding": "ascii", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "filename": "/Users/bradgessell/Documents/lexicity/homepage/templates/contact.html"}
+{"source_encoding": "ascii", "line_map": {"56": 50, "34": 1, "27": 0, "44": 3, "50": 3}, "filename": "/Users/bradgessell/Documents/lexicity/homepage/templates/contact.html", "uri": "contact.html"}
 __M_END_METADATA
 """

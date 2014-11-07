@@ -4,10 +4,10 @@ UNDEFINED = runtime.UNDEFINED
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1414548905.347266
+_modified_time = 1415321569.705294
 _enable_loop = True
-_template_filename = '/Users/bradgessell/Documents/lexicity/homepage/templates/language-home.html'
-_template_uri = 'language-home.html'
+_template_filename = '/Users/bradgessell/Documents/lexicity/homepage/templates/language.html'
+_template_uri = 'language.html'
 _source_encoding = 'ascii'
 import os, os.path, re
 _exports = ['content']
@@ -28,9 +28,9 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
@@ -45,9 +45,9 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         def content():
             return render_content(context)
-        STATIC_URL = context.get('STATIC_URL', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n  <div class="banner">\n    <div class="container">\n      <div class="row">\n        <div class="col-md-12">\n          <h1>Akkadian</h1>\n        </div>\n      </div>\n      <div class="row">\n        <div class="col-md-12 subtitles">\n          <h2>The Akkadian language is the oldest attested Semitic language. It used the cuneiform style of writing and took its cuneiform in large part from Sumerian, an unrelated language.</h2>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div class="middle">\n    <div class="container">\n      <div class="row">\n        <a href="dictionaries/">\n          <div class="col-md-4 tile">\n            <img src="')
         __M_writer(str( STATIC_URL ))
@@ -67,6 +67,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/bradgessell/Documents/lexicity/homepage/templates/language-home.html", "line_map": {"35": 1, "68": 62, "45": 3, "27": 0, "52": 3, "53": 24, "54": 24, "55": 30, "56": 30, "57": 36, "58": 36, "59": 46, "60": 46, "61": 52, "62": 52}, "source_encoding": "ascii", "uri": "language-home.html"}
+{"source_encoding": "ascii", "line_map": {"35": 1, "68": 62, "45": 3, "27": 0, "52": 3, "53": 24, "54": 24, "55": 30, "56": 30, "57": 36, "58": 36, "59": 46, "60": 46, "61": 52, "62": 52}, "filename": "/Users/bradgessell/Documents/lexicity/homepage/templates/language.html", "uri": "language.html"}
 __M_END_METADATA
 """
