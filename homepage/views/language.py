@@ -5,9 +5,10 @@ from homepage import models as hmod
 @view_function
 def process_request(request):
   '''Main process function'''
-  print(">>>>>>>>>>>>>>>>", request.urlparams)
+  
   params = {
-    "languages" : hmod.Language.objects.all(),
+    "language" : hmod.Language.objects.get(name=request.urlparams[0]),
+    "categories" : hmod.Category.objects.all(),
   }
   
   return templater.render_to_response(request, "language.html", params)

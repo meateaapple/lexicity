@@ -7,7 +7,7 @@ def process_request(request):
   '''Main process function'''
   
   params = {
-    "languages" : hmod.Language.objects.all(),
+    "languages" : hmod.Language.objects.order_by("name").all(),
   }
   
   return templater.render_to_response(request, "index.html", params)

@@ -2007,7 +2007,6 @@ select[multiple].input-lg {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
 }
 .btn:focus,
 .btn:active:focus,
@@ -2322,7 +2321,6 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
@@ -5910,6 +5908,11 @@ img {
   -moz-box-shadow:    inset 0px 0px 0px 10px rgba(40, 103, 137, 1);
   box-shadow:         inset 0px 0px 0px 10px rgba(40, 103, 137, 1);
   padding: 2px;
+  display: inline-block;
+  min-width: 300px;
+}
+.tile_container {
+  padding: 12px;
 }
 .tile h3{
   color: black;
@@ -5933,6 +5936,11 @@ img {
 .tile:hover h3 {
   color: black;
 }
+
+.resource-tile {
+  min-width: 400px;
+}
+
 
 /* Testing CSS */
 .subtitles {

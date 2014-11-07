@@ -6,69 +6,30 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h1>Akkadian</h1>
+          <h1>${ language.name }</h1>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 subtitles">
-          <h2>The Akkadian language is the oldest attested Semitic language. It used the cuneiform style of writing and took its cuneiform in large part from Sumerian, an unrelated language.</h2>
+          <h2>${ language.description }</h2>
         </div>
       </div>
     </div>
   </div>
   <div class="middle">
-    <div class="container">
-      <div class="row">
-        <a href="dictionaries/">
-          <div class="col-md-4 tile">
-            <img src="${ STATIC_URL }homepage/media/dict.png"/>
-            <h3>Dictionaries</h3>
-          </div>
-        </a>
-        <a href="grammars/">
-          <div class="col-md-4 tile">
-            <img src="${ STATIC_URL }homepage/media/gram.png"/>
-            <h3>Grammars</h3>
-          </div>
-        </a>
-			  <a href="charts/">
-			    <div class="col-md-4 tile">
-            <img src="${ STATIC_URL }homepage/media/chart.png"/>
-            <h3>Charts &amp; Aids</h3>
-          </div>
-			   </a>
-		   </div>
-       <div class="row">
-         <div class="col-md-2">
-         </div>
-         <a href="texts/">
-	         <div class="col-md-4 tile">
-             <img src="${ STATIC_URL }homepage/media/text.png"/>
-             <h3>Texts</h3>
-           </div>
-         </a>
-         <a href="other-resources/">
-           <div class="col-md-4 tile">
-             <img src="${ STATIC_URL }homepage/media/other.png"/>
-             <h3>Other Resources</h3>
-           </div>
-         </a>
-         <div class="col-md-2">
-         </div>
-       </div>
-       <div class="row">
-         <div class="col-md-12" style="text-align: center;">
-           <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-           <!-- Banner Test -->
-           <ins class="adsbygoogle"
-                style="display:inline-block;width:728px;height:90px"
-                data-ad-client="ca-pub-4108381177414580"
-                data-ad-slot="7367531832"></ins>
-           <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-           </script>
-         </div>
-       </div>
+    <div class="tile_container text-center">
+      
+        %for category in categories:
+
+          <a href="/resources/${ language.name| u }/${ category.name| u}/">
+            <div class="tile resource-tile">
+              <img src="${ STATIC_URL }homepage/media/${ category.img_name }"/>
+              <h3>${ category.name }</h3>
+            </div>
+          </a>
+        
+        %endfor
+        
      </div>
    </div>
 
