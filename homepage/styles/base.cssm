@@ -193,7 +193,7 @@ th {
   }
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
   a[href]:after {
     content: " (" attr(href) ")";
@@ -294,7 +294,7 @@ a {
 a:hover,
 a:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -2306,7 +2306,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #2a6496;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,
@@ -5151,10 +5151,12 @@ button.close {
   margin-top: -2px;
 }
 .modal-title {
+  color: #2F3A3A;
   margin: 0;
   line-height: 1.42857143;
 }
 .modal-body {
+  color: black;
   position: relative;
   padding: 20px;
 }
@@ -5869,7 +5871,6 @@ img {
 }
 .bottom .container {
     background-color: #C2C2C2;
-    min-height: 150px;
 }
 .bottom .container h3 {
     color: black;
@@ -5902,20 +5903,21 @@ img {
 .to-tutorial {
     text-align: center;
 }
+.top-buffer { 
+  margin-top:20px; 
+}
 .tile {
   background-color: #F5F5F5;
   -webkit-box-shadow: inset 0px 0px 0px 10px rgba(40, 103, 137, 1);
   -moz-box-shadow:    inset 0px 0px 0px 10px rgba(40, 103, 137, 1);
   box-shadow:         inset 0px 0px 0px 10px rgba(40, 103, 137, 1);
   padding: 2px;
-  display: inline-block;
-  min-width: 300px;
 }
 .tile_container {
   padding: 12px;
 }
 .tile h3{
-  color: black;
+  color: #2F3A3A;
   font-weight: 400;
   text-align: center;
   padding: 9px;
@@ -5937,10 +5939,15 @@ img {
   color: black;
 }
 
-.resource-tile {
-  min-width: 400px;
+.social_button {
+  margin: 10px;
 }
 
+.recommendations {
+  display: inline-block;
+  margin-left: 12px;
+  margin-right: 12px;
+}
 
 /* Testing CSS */
 .subtitles {
@@ -5973,6 +5980,12 @@ form textarea {
   color: black;
 }
 
+.category-image {
+  font-size: 125px;
+  color: #495454;
+  margin-top: 28px;
+}
+
 .resource-table {
   max-width: 100%;
   margin: 25px auto;
@@ -5983,7 +5996,7 @@ form textarea {
   padding: 15px;
   background-color: #F5F5F5;
   color: #286789;
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -6014,6 +6027,11 @@ form textarea {
   color: #DBDBDB;
   font-weight: bold;
   text-decoration: none;
+}
+
+.large-ad iframe,
+.mobile-ad iframe {
+  margin-top: 12px;
 }
 
 @media (max-width: 768px) {

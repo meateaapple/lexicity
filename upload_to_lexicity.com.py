@@ -7,7 +7,7 @@ import datetime
 
 RSYNC_OPTIONS = [
   '-e "ssh -p 9988"',
-#  '--verbose',
+  '--verbose',
   '--stats',
   '--delete',
   '--links',
@@ -23,7 +23,7 @@ RSYNC_OPTIONS = [
 
 
 # set up the destination
-DEST_HOST, DEST_DIR = ( 'test.myeducator.com', '/home/lexicity/')
+DEST_HOST, DEST_DIR = ( 'test.myeducator.com', '/home/lexicity/lexicity/')
 
 # ensure the user really wants to do this
 areyousure = input("Are you sure you are ready to upload to the %s site? (y/n) " % DEST_HOST)

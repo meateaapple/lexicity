@@ -13,39 +13,113 @@
           <h1>${ language.name | h } ${ category.name | h }</h1>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <button type="button" class="btn btn-warning btn-lg top-buffer" data-toggle="modal" data-target="#myModal">
+            See Recommendations
+          </button>
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Lexicity Recommendations</h4>
+                </div>
+                <div class="modal-body">
+                  
+                  %if recommendations.count() == 0:
+                  
+                    <p>There are no recommendations for ${ language.name | h } ${ category.name | h } yet. <a href="/contact/">Contact us</a> and tell us what to recommend!</p>
+                    <p>Please accept our apologies. You can watch <a href="https://www.youtube.com/watch?v=CMNry4PE93Y" target="_blank">this video</a> instead.</p>
+                    
+                  %else: 
+                  
+                    %for r in recommendations:
+                      <div class="recommendations">
+                        
+                        ${ r.code }
+                        
+                      </div>
+                    %endfor
+                  
+                  %endif
+                  
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        </div>
+      </div>
     </div>
   </div>
   
   <div class="middle">
     <div class="container">
+      <div class="row top-buffer text-center">
+        <div class="col-md-12">
+          <a href="/language/${ language.name }/">
+            <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back to ${ language.name | h } Resources</button>
+          </a>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-2">
         </div>
         <div class="col-md-8">
           <table class="resource-table">
             <tr>
-              <th>Resource</th>
-              <th>Description</th>
+              <th width="45%">Resource</th>
+              <th width="45%">Description</th>
+              <th width="10%"/>
             </tr>
+            
+            %if resources.count() == 0:
+            
+              <tr>
+                <td colspan="3">
+                  <p>Darn it! We're still working on getting some ${ language.name } ${ category.name } up. Have some you want to see? <a href="/contact/">Contact us</a> and tell us what to recommend!</p>
+                  <p>In the meantime, <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">this video</a> may be what you're looking for.</p>
+                </td>
+              </tr>
+              
+            %else:
             
             %for resource in resources:
             
             <tr>
-              <td><a href="${ resource.url }" target="_blank">${ resource.title | h}</a></td>
+              <td>
+                <a href="${ resource.url }" target="_blank">${ resource.title | h}</a>
+              </td>
               <td>${ resource.description | h }</td>
+              <td>
+                <a href="${ resource.url }" target="_blank">
+                  <button type="button" class="btn btn-default">Go <span class="glyphicon glyphicon-arrow-right"></span></button>
+                </a>
+              </td>
             </tr> 
             
             %endfor
+            
+            %endif
           
-              <td colspan="2">
-                <a href="/language/${ language.name }/">
-                  <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back to ${ language.name | h } Resources</button>
-                </a>
-              </td>
             </tr>
           </table>
         </div>
         <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <a href="/language/${ language.name }/">
+            <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back to ${ language.name | h } Resources</button>
+          </a>
+        </div>
+      </div>
+      
         </div>
       </div>
     </div>

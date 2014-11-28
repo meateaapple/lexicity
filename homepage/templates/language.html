@@ -17,19 +17,39 @@
     </div>
   </div>
   <div class="middle">
-    <div class="tile_container text-center">
+    <div class="container text-center">
+      <div class="row">
       
-        %for category in categories:
+        %for i, category in enumerate(categories):
 
           <a href="/resources/${ language.name| u }/${ category.name| u}/">
-            <div class="tile resource-tile">
-              <img src="${ STATIC_URL }homepage/media/${ category.img_name }"/>
-              <h3>${ category.name }</h3>
+            <div class="col-md-4 tile">
+              <!--<img src="${ STATIC_URL }homepage/media/"/>-->
+              <span class="glyphicon ${ category.img_name } category-image"></span>
+              <h3 class="tile-title">${ category.name }</h3>
             </div>
           </a>
         
-        %endfor
+        %if i == 2:
         
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+         
+        %endif
+        
+        %endfor
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <a href="/">
+            <button type="button" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-arrow-left"></span> Back to Languages</button>
+          </a>
+        </div>
+      </div>
      </div>
    </div>
 

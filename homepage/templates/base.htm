@@ -13,6 +13,21 @@
     
     ## add any site-wide scripts or CSS here; for example, jquery:
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30676234-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5463c10e2ad6f4c1" async="async"></script>
   
     ## render the css with the same name as this page
     ${ static_renderer.get_template_css(request, context)  }
@@ -22,75 +37,119 @@
   
   <header class="top" role="header">
     <div class="container">
-      <a href="#" class="navbar-brand pull-left">Lexicity</a>
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="glyphicon glyphicon-align-justify"></span>
-        </button>
-        <nav class="navbar-collapse collapse" role="navigation">
-          <ul class="navbar-nav nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/video/">Videos</a></li>
-            <li><a href="/contact/">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <a href="/" class="navbar-brand pull-left">Lexicity</a>
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="glyphicon glyphicon-align-justify"></span>
+      </button>
+      <nav class="navbar-collapse collapse" role="navigation">
+        <ul class="navbar-nav nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="http://lexicityonline.tumblr.com" target="_blank">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   
     <%block name="content">
       Site content goes here in sub-templates.
     </%block>  
-    
-    
-  <div class="container large-ad">
-    <div class="row">
-      <div class="col-md-12" style="text-align: center;">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Banner Test -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-4108381177414580"
-             data-ad-slot="7367531832"></ins>
-           <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </div>
-  </div>
-  <div class="container mobile-ad">
-    <div class="row">
-      <div class="col-md-12" style="text-align: center;">
-          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- Language Home Ads -->
-          <ins class="adsbygoogle"
-             style="display:inline-block;width:320px;height:100px"
-             data-ad-client="ca-pub-4108381177414580"
-             data-ad-slot="5954517431"></ins>
-           <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-    </div>
-  </div>
   
   <div class="bottom">
+    <div class="container large-ad">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+          <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Banner Test -->
+          <ins class="adsbygoogle"
+               style="display:inline-block;width:728px;height:90px"
+               data-ad-client="ca-pub-4108381177414580"
+               data-ad-slot="7367531832"></ins>
+             <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="container mobile-ad">
+      <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+          <!-- Language Home Ads -->
+            <ins class="adsbygoogle"
+               style="display:inline-block;width:320px;height:100px"
+               data-ad-client="ca-pub-4108381177414580"
+               data-ad-slot="5954517431"></ins>
+             <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row text-center">
-        <div class="col-md-4">
+        <div class="col-md-12">
+          <a href="http://www.facebook.com/lexicityonline" target="_blank" class="social_button">
+            <img src="/static/homepage/media/facebook.png"/>
+          </a>
+          <a href="http://plus.google.com/+Lexicity" rel="publisher" target="_blank" class="social_button">
+            <img src="/static/homepage/media/googleplus.png"/>
+          </a>
+          <a href="http://www.twitter.com/lexicityonline" target="_blank" class="social_button">
+            <img src="/static/homepage/media/twitter.png"/>
+          </a>
+          <a href="http://lexicityonline.tumblr.com" target="_blank" class="social_button">
+            <img src="/static/homepage/media/tumblr.png"/>
+          </a>
+          <a href="http://www.youtube.com/channel/UCUvkgZNXd7nv5w-j9X7G7DQ/videos" target="_blank" class="social_button">
+            <img src="/static/homepage/media/youtube.png"/>
+          </a>
         </div>
-        <div class="col-md-4">
-          <a href="https://www.facebook.com/lexicityonline" target="_blank">
-            <img src="/static/homepage/media/New_facebook.png"/>
-          </a>
-          <a href="https://plus.google.com/+Lexicity" target="_blank">
-            <img src="/static/homepage/media/New_googleplus.png"/>
-          </a>
-          <a href="https://www.twitter.com/lexicityonline" target="_blank">
-            <img src="/static/homepage/media/New_twitter.png"/>
-          </a>
-          <h3>Send us resources <a href="/contact/">here</a>.</h3>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <button type="button" class="btn btn-warning btn-lg top-buffer" data-toggle="modal" data-target="#signup">
+            Subscribe To Our Mailing List
+          </button>
+          <div class="modal fade" id="signup">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Subscribe To Our Mailing List</h4>
+                </div>
+                <div class="modal-body text-center">
+                  
+                 <!-- Begin MailChimp Signup Form -->
+                 <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+                 <style type="text/css">
+                 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+                 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                 </style>
+                 <div id="mc_embed_signup">
+                 <form action="//lexicity.us9.list-manage.com/subscribe/post?u=daade0457d3e1b477f11374da&amp;id=5d62e3f5a7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                     <div id="mc_embed_signup_scroll">
+                 	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                     <div style="position: absolute; left: -5000px;"><input type="text" name="b_daade0457d3e1b477f11374da_5d62e3f5a7" tabindex="-1" value=""></div>
+                     <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                     </div>
+                 </form>
+                 </div>
+
+                 <!--End mc_embed_signup-->
+                  
+                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          <p>&copy; 2014 Lexicity</p>
         </div>
       </div>
     </div>

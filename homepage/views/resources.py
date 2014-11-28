@@ -9,11 +9,13 @@ def process_request(request):
   language = hmod.Language.objects.get(name=request.urlparams[0])
   category = hmod.Category.objects.get(name=request.urlparams[1])
   resources = hmod.Resource.objects.filter(language=language, category=category)
+  recommendations = hmod.Recommendations.objects.filter(language=language, category=category)
   
   params = {
     "language" : language,
     "category" : category,
     "resources" : resources,
+    "recommendations" : recommendations,
   }
   
   return templater.render_to_response(request, "resources.html", params)
