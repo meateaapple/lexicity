@@ -24,12 +24,4 @@ class Resource(models.Model):
   
   def __str__(self):
     return "%s-%s: %s" % (self.language.name, self.category.name, self.title)
-    
-class Recommendations(models.Model):
-  language = models.ForeignKey(Language)
-  category = models.ForeignKey(Category)
-  code = models.TextField(null=True, blank=True)
-  
-  def __str__(self):
-    return "%s-%s" % (self.language.name, self.category.name)
   

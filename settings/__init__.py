@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'evu)di@f-t8&ddiu$@+411%xyq6y=0sv++^#8lq5x43uj*9@gf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['.lexicity.com', 'localhost']
+ALLOWED_HOSTS = []
 
 
 # Application definition

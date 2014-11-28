@@ -1,7 +1,6 @@
 from . import templater
 from django_mako_plus.controller.router import view_function
 from homepage import models as hmod
-from django.http import HttpResponseRedirect
 
 @view_function
 def process_request(request):

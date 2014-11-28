@@ -24,28 +24,18 @@
           <h2>Choose Your Language</h2>
         </div>
       </div>
-      <div class="row">
         
       %for i, language in enumerate(languages):
       
-      <div class="col-md-3 tile">
         <a href="/language/${ language.name| u }/">
-          <div>
+          <div class="tile">
             <img src="${ STATIC_URL }homepage/media/${ language.img_name }"/>
             <h3>${ language }</h3>
           </div>
         </a>
-      </div>
-      
-      %if i % 4 == 3 and i > 0:
-      
-        </div>
-        <div class="row">
-      
-      %endif
 
       %endfor
-      </div>
+      
     </div>
   </div>
 </%block>
